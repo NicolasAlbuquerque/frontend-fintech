@@ -1,0 +1,144 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg-color{
+  background-color: var(--bg-color);
+}
+
+
+
+.container-principal {
+  background:linear-gradient(var(--bg-color2),var(--bg-color));
+  width: 80vw;
+
+  padding: 3%;
+  margin: 2% auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.meu-botao {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+.meu_texto{
+  margin-bottom: 0;
+  font-size: 5vw ;
+}
+
+.texto-verde{
+  color: var(--verde);
+}
+
+.bg-azul{
+  background-color: var(--azul);
+}
+
+.minha-font{
+  font-size: 4vh;
+  margin-bottom: 0;
+
+}
+
+
+.icone-ini{
+  font-size: 5vw;
+}
+
+.icone-page{
+  font-size: 15vw;
+
+}
+.icone-exibicao{
+  font-size: 5rem;
+
+
+}
+.icone-pig-ini{
+  font-size: 10vw;
+}
+
+.icone-invest-ini{
+  font-size: 10vw;
+}
+
+.texto-vermelho{
+  color: var(--vermelho);
+}
+.texto-azul2{
+  color: var(--azul2);
+}
+
+.data{
+  font-weight: 500;
+  font-size: 2vh;
+  margin-bottom: 0;
+}
+
+.grafico{
+  width: 80%;
+  height: 30%;
+}
+
+html{
+  font-size: 82.5%; 
+}
+
+
+.click{
+  text-decoration: none;
+  padding: 0;
+}
+
+a {
+  all: revert;
+  color: inherit; 
+  text-decoration: none ;
+  display: contents;
+}
+
+.card-link{
+  all: revert;
+  color: inherit;
+  text-decoration: none ;
+  display: contents;
+}
+
+
+.meu-logo{
+  max-width: 4rem;
+  
+}
+
+
+.button-delete{
+  background: none;
+  color:var(--vermelho);
+  border: none;
+  font-size: 2rem;
+  margin: auto;
+}
+.button-edit{
+  background: none;
+  color:var(--azul2);
+  border: none;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.section-exib{
+  min-height: 50vh;
+}
+
+.add-button{
+  background: none;
+  border: none;
+  padding: 1rem 4rem;
+  background-color: var(--azul);
+  border-radius: 6rem;
+  color: var(--branco);
+}

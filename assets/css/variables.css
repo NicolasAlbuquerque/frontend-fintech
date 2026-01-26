@@ -1,0 +1,14 @@
+:root{
+  --bg-color:#1B1C21;
+  --bg-color2:#24252a;
+  --bg-gradiente:linear-gradiente(var(--bg-color2),var(--bg-color));
+  --verde:#2AA737;
+  --vermelho:#E44535;
+  --azul:#313649;
+  --azul2: #4f7cea;
+  --branco: #ffff
+}
+
+.bg-color{
+  background-color: var(--bg-color);
+}
