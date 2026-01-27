@@ -131,7 +131,10 @@ a {
 }
 
 .section-exib{
-  min-height: 50vh;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .add-button{
@@ -141,4 +144,22 @@ a {
   background-color: var(--azul);
   border-radius: 6rem;
   color: var(--branco);
+}
+
+
+.button-invest{
+  background: none;
+  border: none;
+  background-color: var(--azul2);
+  border-radius: 5rem;
+  color: var(--branco);
+  padding: 1rem 1rem;
+}
+
+.menu-filtro{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  width: 80vw;
+  height: 8vh;
 }
