@@ -1,7 +1,8 @@
 const containerReceitas = document.querySelector('.exibir-receitas')
-const containerGastos = document.querySelector('.exibir-gastos')
+const containerGastos = document.querySelector('.exibir-gastos');
 const containerInvestimentos = document.querySelector('.exibir-invest')
-const filtroInvest = document.querySelector('.menu-filtro')
+const filtroInvest = document.querySelector('.menu-filtro');
+const ultimoGasto = document.querySelector('.ultimo-gasto');
 
 console.log(containerReceitas);
 
@@ -29,6 +30,7 @@ const transations = [
   {nome:'almoço', tipo:'gasto', valor: 20,  data:'20/03', hora: '12:45',recorrente: false},
   {nome:'internet', tipo:'gasto', valor: 120, data:'20/03', hora: '12:45' ,recorrente: true},
   {nome:'Celular', tipo:'gasto', valor: 45, data:'20/03', hora: '12:45'  ,recorrente: true},
+  {nome:'Convenio', tipo:'gasto', valor: 126, data:'20/03', hora: '12:45'  ,recorrente: true},
   {nome:'Celular', tipo:'investimento', valor: 45, data:'20/03', hora: '12:45'},
   {nome:'Celular', tipo:'investimento', valor: 45, data:'20/03', hora: '12:45'},
   {nome:'Celular', tipo:'investimento', valor: 45, data:'20/03', hora: '12:45'},
@@ -55,13 +57,15 @@ const gastosRecorrentes =transations.filter((transation)=>{
   return transation['tipo'] === 'gasto' && transation['recorrente'] === true;
 });
 const renderizarFiltro= ()=>{
-
+  if(!filtroInvest) return;
   filtroInvest.innerHTML = tipoIvestimento.map((tipoIvestimento)=>{
     return `
     <button class=" button-invest  mx-3">${tipoIvestimento}</button>
     `
   }).join('')
-}
+};
+
+
 const RENDER=() => {
 
 
@@ -113,14 +117,51 @@ const RENDER=() => {
           </article>
   `
 }).join('')
+};
+
+
+const renderizarUltimoGasto = (gastos)=>{
+  ultimoGasto.innerHTML = `
+            <article class="col-11 row my-4 mx-auto my-auto " >
+
+            <!-- início ícone -->
+              <div class="col-1 p-2 m-auto d-flex texto-vermelho icone-exibicao justify-content-center">
+                <i class="bi bi-coin"></i>
+              </div>
+              <!-- fim ícone -->
+              
+              <!-- Data -->
+              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
+                <div class="col-12"><p class="mb-0  ">${gastos[gastos.length-1].data}</p></div>
+                <div class="col-12"><p class="mb-0 ">${gastos[gastos.length -1].hora}</p></div>
+                <div class="col-12"><p class="mb-0 ">${gastos[gastos.length-1].nome}</p></div>
+                <p class="minha-font fs-2 text-center "></p>
+              <!-- fim Data -->
+              </div>
+              
+              <!-- Valor-->
+              <div class="col-4 p-2 my-auto ">
+                <p class="minha-font  fs-2">${gastos[gastos.length-1]['valor'].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+              </div>
+              <!-- Fim Valor-->
+              <!--  Botões --> 
+              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
+                <button   class="button-delete"><i class="bi bi-trash3 "></i></button>
+                <button class="button-edit"><i class="bi bi-pencil"></i></button>
+              </div>
+              <!-- fim botões -->
+          </article>
+  `
 }
+console.log(gastos[length]);
 
 
 
 // RENDER()
 (()=>{
     RENDER();
-    renderizarFiltro()
+    renderizarFiltro();
+    renderizarUltimoGasto(gastos)
 })();
 // console.log(containerGastos);
 
