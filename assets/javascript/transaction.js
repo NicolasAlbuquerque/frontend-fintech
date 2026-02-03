@@ -101,7 +101,7 @@ const RENDER=() => {
               
               <!-- Valor-->
               <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$${transacao['valor'].toFixed(2)}</p>
+                <p class="minha-font  fs-2">${transacao['valor'].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
               </div>
               <!-- Fim Valor-->
               <!--  Botões --> 
