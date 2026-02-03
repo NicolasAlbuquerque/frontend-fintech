@@ -154,12 +154,23 @@ a {
   border-radius: 5rem;
   color: var(--branco);
   padding: 1rem 1rem;
+  white-space: nowrap;
+
 }
 
 .menu-filtro{
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
-  width: 80vw;
-  height: 8vh;
+  width: 85vw;
+  height: 10vh;
+}
+
+.month-selector{
+  background: none;
+  /* background-color: var(--azul); */
+  color: var(--branco);
+  opacity: 5;
+  border: none;
+  text-align: center;
 }

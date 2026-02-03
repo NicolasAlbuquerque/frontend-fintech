@@ -29,9 +29,7 @@
     <!-- minha css -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/variables.css" />
-<!-- Link cdn do cart.js para criação do grafico; -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <Script src="assets/javascript/script.js"></Script> -->
+    <script src="assets/javascript/transaction.js" defer></script>
   </head>
   <body class="bg-color">
     <!--------------------------------------------INICIO NAVBAR---------------------------------------------------------->
@@ -134,13 +132,13 @@
         <!-- segunda linha -->
         <p>fevereiro</p>
 
+
         <!-- -fim segunda linnha ----->
 
-
-
-        <!------------------------------------- container receitas ------------------------------------------------------>
-
-        <section class="border section-exib  ">
+<!-- DATA -->
+        <!------------------------------------- container gastos ------------------------------------------------------>
+        
+        <section class="border section-exib  exibir-gastos">
           <article class="col-11 row my-4 mx-auto my-auto " >
 
             <!-- início ícone -->
@@ -172,148 +170,7 @@
           </article>
           <article class="col-11 row my-4 mx-auto my-auto " >
 
-            <!-- início ícone -->
-              <div class="col-1 p-2 m-auto texto-vermelho d-flex  icone-exibicao justify-content-center">
-                <i class="bi bi-coin"></i>
-              </div>
-              <!-- fim ícone -->
-              
-              <!-- Data -->
-              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
-                <div class="col-12"><p class="mb-0  ">04/12</p></div>
-                <div class="col-12"><p class="mb-0 ">12:45</p></div>
-                <div class="col-12"><p class="mb-0 ">Fiaap</p></div>
-                <p class="minha-font fs-2 text-center "></p>
-              <!-- fim Data -->
-              </div>
-              
-              <!-- Valor-->
-              <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$755,00</p>
-              </div>
-              <!-- Fim Valor-->
-              <!--  Botões --> 
-              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
-                <button class="button-delete"><i class="bi bi-trash3 "></i></button>
-                <button class="button-edit"><i class="bi bi-pencil"></i></button>
-              </div>
-              <!-- fim botões -->
-          </article>
-          <article class="col-11 row my-4 mx-auto my-auto " >
 
-            <!-- início ícone -->
-              <div class="col-1 p-2 m-auto texto-vermelho d-flex  icone-exibicao justify-content-center">
-                <i class="bi bi-coin"></i>
-              </div>
-              <!-- fim ícone -->
-              
-              <!-- Data -->
-              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
-                <div class="col-12"><p class="mb-0  ">04/12</p></div>
-                <div class="col-12"><p class="mb-0 ">12:45</p></div>
-                <div class="col-12"><p class="mb-0 ">Fiaap</p></div>
-                <p class="minha-font fs-2 text-center "></p>
-              <!-- fim Data -->
-              </div>
-              
-              <!-- Valor-->
-              <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$755,00</p>
-              </div>
-              <!-- Fim Valor-->
-              <!--  Botões --> 
-              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
-                <button class="button-delete"><i class="bi bi-trash3 "></i></button>
-                <button class="button-edit"><i class="bi bi-pencil"></i></button>
-              </div>
-              <!-- fim botões -->
-          </article>
-          <article class="col-11 row my-4 mx-auto my-auto " >
-
-            <!-- início ícone -->
-              <div class="col-1 p-2 m-auto texto-vermelho d-flex  icone-exibicao justify-content-center">
-                <i class="bi bi-coin"></i>
-              </div>
-              <!-- fim ícone -->
-              
-              <!-- Data -->
-              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
-                <div class="col-12"><p class="mb-0  ">04/12</p></div>
-                <div class="col-12"><p class="mb-0 ">12:45</p></div>
-                <div class="col-12"><p class="mb-0 ">Fiaap</p></div>
-                <p class="minha-font fs-2 text-center "></p>
-              <!-- fim Data -->
-              </div>
-              
-              <!-- Valor-->
-              <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$755,00</p>
-              </div>
-              <!-- Fim Valor-->
-              <!--  Botões --> 
-              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
-                <button class="button-delete"><i class="bi bi-trash3 "></i></button>
-                <button class="button-edit"><i class="bi bi-pencil"></i></button>
-              </div>
-              <!-- fim botões -->
-          </article>
-          <article class="col-11 row my-4 mx-auto my-auto " >
-
-            <!-- início ícone -->
-              <div class="col-1 p-2 m-auto texto-vermelho d-flex  icone-exibicao justify-content-center">
-                <i class="bi bi-coin"></i>
-              </div>
-              <!-- fim ícone -->
-              
-              <!-- Data -->
-              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
-                <div class="col-12"><p class="mb-0  ">04/12</p></div>
-                <div class="col-12"><p class="mb-0 ">12:45</p></div>
-                <div class="col-12"><p class="mb-0 ">Fiaap</p></div>
-                <p class="minha-font fs-2 text-center "></p>
-              <!-- fim Data -->
-              </div>
-              
-              <!-- Valor-->
-              <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$755,00</p>
-              </div>
-              <!-- Fim Valor-->
-              <!--  Botões --> 
-              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
-                <button class="button-delete"><i class="bi bi-trash3 "></i></button>
-                <button class="button-edit"><i class="bi bi-pencil"></i></button>
-              </div>
-              <!-- fim botões -->
-          </article>
-          <article class="col-11 row my-4 mx-auto my-auto " >
-
-            <!-- início ícone -->
-              <div class="col-1 p-2 m-auto texto-vermelho d-flex  icone-exibicao justify-content-center">
-                <i class="bi bi-coin"></i>
-              </div>
-              <!-- fim ícone -->
-              
-              <!-- Data -->
-              <div class="col-3 m-0 p-2 row my-auto d-flex flex-column  text-center">
-                <div class="col-12"><p class="mb-0  ">04/12</p></div>
-                <div class="col-12"><p class="mb-0 ">12:45</p></div>
-                <div class="col-12"><p class="mb-0 ">Fiaap</p></div>
-                <p class="minha-font fs-2 text-center "></p>
-              <!-- fim Data -->
-              </div>
-              
-              <!-- Valor-->
-              <div class="col-4 p-2 my-auto ">
-                <p class="minha-font  fs-2">R$755,00</p>
-              </div>
-              <!-- Fim Valor-->
-              <!--  Botões --> 
-              <div class="col-3 p-2 my-auto  ms-2 d-flex" >
-                <button class="button-delete"><i class="bi bi-trash3 "></i></button>
-                <button class="button-edit"><i class="bi bi-pencil"></i></button>
-              </div>
-              <!-- fim botões -->
           </article>
 
 
@@ -340,12 +197,5 @@
 
 
     </main>    
-    <!-- chamada do JS do BS -->
-
-
-    <!-- script do gráfico do cart.js -->
-    <script>  
-
-    </script>
   </body>
 </html>
