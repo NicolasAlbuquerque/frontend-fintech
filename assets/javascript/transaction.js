@@ -3,7 +3,9 @@ const containerGastos = document.querySelector('.exibir-gastos');
 const containerInvestimentos = document.querySelector('.exibir-invest')
 const filtroInvest = document.querySelector('.menu-filtro');
 const ultimoGasto = document.querySelector('.ultimo-gasto');
-
+const totalGasto =document.querySelector('.total-gasto');
+const totalReceita = document.querySelector('.total-receita');
+const agora = new Date;
 console.log(containerReceitas);
 
 const tipoIvestimento = [
@@ -37,7 +39,7 @@ const transations = [
   {nome:'Celular', tipo:'investimento', valor: 45, data:'20/03', hora: '12:45'},
   {nome:'Celular', tipo:'investimento', valor: 45, data:'20/03', hora: '12:45'},
 ];
-console.table(transations)
+
 const receitas = transations.filter((transation) => {
   return transation['tipo'] === 'receita';
 });
@@ -56,6 +58,34 @@ console.log(gastos);
 const gastosRecorrentes =transations.filter((transation)=>{
   return transation['tipo'] === 'gasto' && transation['recorrente'] === true;
 });
+
+//somar os gastos
+const totalGastos = gastos.reduce((total, gasto)=>{
+  return total + gasto.valor;
+}, 0);
+
+// somar as receitas
+const totalReceitas = receitas.reduce((total, receita)=>{
+  return total + receita.valor
+},0)
+
+console.log(`total de gastos ${totalGastos}`);   
+console.log(`total de receitas ${totalReceitas}`);   
+
+
+//renderizar o total recebido
+const exibirTotalRecebido = (totalReceita) => {
+  if(!totalReceita)return;
+  return totalReceita.innerText =  `${totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+}
+//renderizar o total gasto
+const exibirTotalGasto = (totalGasto) => {
+  if(!totalGasto)return;
+  return totalGasto.innerText=`${totalGastos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+  
+}
+
+//renderizando filtro dos investimentos
 const renderizarFiltro= ()=>{
   if(!filtroInvest) return;
   filtroInvest.innerHTML = tipoIvestimento.map((tipoIvestimento)=>{
@@ -65,13 +95,11 @@ const renderizarFiltro= ()=>{
   }).join('')
 };
 
-
+//renderizando os objetos em seus respectivos continers
 const RENDER=() => {
-
 
   if(containerReceitas){
     renderizarLista(receitas,containerReceitas,'texto-verde', `<i class="bi bi-cash"></i>`)
-
   }
   
   if(containerGastos){
@@ -119,8 +147,9 @@ const RENDER=() => {
 }).join('')
 };
 
-
+// Renderização do ultimmo gasto
 const renderizarUltimoGasto = (gastos)=>{
+  if(!ultimoGasto)return;
   ultimoGasto.innerHTML = `
             <article class="col-11 row my-4 mx-auto my-auto " >
 
@@ -153,15 +182,16 @@ const renderizarUltimoGasto = (gastos)=>{
           </article>
   `
 }
-console.log(gastos[length]);
-
+console.log(`total de gastos ${totalGastos}`);
 
 
 // RENDER()
 (()=>{
     RENDER();
     renderizarFiltro();
-    renderizarUltimoGasto(gastos)
+    renderizarUltimoGasto(gastos);
+    exibirTotalGasto(totalGasto);
+    exibirTotalRecebido(totalReceita);
 })();
 // console.log(containerGastos);
 
