@@ -34,6 +34,8 @@
     <!-- <Script src="assets/javascript/script.js"></Script> -->
 
     <script src="assets/javascript/transaction.js" defer></script>
+  <!-- Script de direcionamento do usuário -->
+    <script src="assets/javascript/direcionarUsuario.js" defer></script>
   </head>
   <body class="bg-color">
     <!--------------------------------------------INICIO NAVBAR---------------------------------------------------------->
@@ -134,8 +136,8 @@
     <main class="container p-3 rounded-3 text-light container-principal w-100">
       <section class="row ">
         <!-- primeira linha -->
-        <div class="col-12 text-end">
-          <p class="mb-0 me-4">outubro</p>
+        <div class="col-12 text-end my-4 renderizar-mes">
+          <input type="date" class="mb-0 me-4 calendario" hidden>
           
         </div>
         <!-- fim primeira linha -->
@@ -161,7 +163,7 @@
         <!-- container gastos -->
         <aside class="col-6 p-3 row m-auto direcionar-gastos">
           <div
-          class="col-8 p-0 align-items-end justify-content-end d-flex"
+          class="col-8 p-0 align-items-end justify-content-end d-flex " 
           >
           <p class="meu_texto display-6">Gastos</p>
         </div>
@@ -234,7 +236,7 @@
         <!------------------------------GRÁFICO------------------------------------->
         
         <article class="container row rounded-5 bg-azul my-3 m-auto h-70 text-center">
-          <h2 class="meu_texto p-3">Balanço do mês de Outubro</h2>
+          <h2 class="meu_texto p-3 mes-grafico">Balanço do mês de Outubro</h2>
           <div class="col-6 p-5 m-auto  ">
             <canvas id="grafico" class="grafico"></canvas>
           </div>

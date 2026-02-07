@@ -1,10 +1,11 @@
+
 const containerReceitas = document.querySelector('.exibir-receitas')
 const containerGastos = document.querySelector('.exibir-gastos');
 const containerInvestimentos = document.querySelector('.exibir-invest')
 const filtroInvest = document.querySelector('.menu-filtro');
-const ultimoGasto = document.querySelector('.ultimo-gasto');
 const totalGasto =document.querySelector('.total-gasto');
 const totalReceita = document.querySelector('.total-receita');
+const ultimoGasto = document.querySelector('.ultimo-gasto');
 const agora = new Date;
 console.log(containerReceitas);
 
@@ -193,34 +194,54 @@ console.log(`total de gastos ${totalGastos}`);
     exibirTotalGasto(totalGasto);
     exibirTotalRecebido(totalReceita);
 })();
-// console.log(containerGastos);
-
-
-//event
-
-ultimoGasto.addEventListener('click', ()=> {
-  window.location.href = 'gastos.html'
-}); 
 
 
 
+
+
+
+
+//Renderizar Mês ------------------------------------------------------------------------------ 
+
+const mes = agora.getMonth();
+const renderizarMes = document.querySelector('.renderizar-mes');
+const calendario = document.querySelector('.calendario')
+const mesGrafico = document.querySelector('.mes-grafico')
+console.log(mes);
+console.log();
+
+const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const mesAtual = meses[mes];
+console.log(mesAtual);
+
+renderizarMes.innerHTML  = `${mesAtual}`
+
+mesGrafico.innerText = `Balanço do mês ${mesAtual}` 
+
+
+
+//         REDIRECIONAR USUÁRIO
 const direcionarReceitas = document.querySelector('.direcionar-receitas');
 const direcionarGastos = document.querySelector('.direcionar-gastos');
 const direcionarInvestimento = document.querySelector('.direcionar-invest');
-const direcionarObjetivos = document.querySelector('.direcionar-objetivos') 
+const direcionarObjetivos = document.querySelector('.direcionar-objetivos'); 
 
-direcionarReceitas.addEventListener('click', () => {
+direcionarReceitas?.addEventListener('click', () => {
   window.location.href = 'receitas.html'
-});
+}) ;
 
-direcionarGastos.addEventListener('click', () => {
+direcionarGastos?.addEventListener('click', () => {
   window.location.href = 'gastos.html'
 });
 
-direcionarInvestimento.addEventListener('click', () => {
+direcionarInvestimento?.addEventListener('click', () => {
   window.location.href = 'investimentos.html'
 });
 
-direcionarObjetivos.addEventListener('click', () => {
+direcionarObjetivos?.addEventListener('click', () => {
   window.location.href = 'objetivos.html'
 });
+
+ultimoGasto?.addEventListener('click', ()=> {
+  window.location.href = 'gastos.html'
+}); 
