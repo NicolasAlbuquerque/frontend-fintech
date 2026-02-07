@@ -196,3 +196,31 @@ console.log(`total de gastos ${totalGastos}`);
 // console.log(containerGastos);
 
 
+//event
+
+ultimoGasto.addEventListener('click', ()=> {
+  window.location.href = 'gastos.html'
+}); 
+
+
+
+const direcionarReceitas = document.querySelector('.direcionar-receitas');
+const direcionarGastos = document.querySelector('.direcionar-gastos');
+const direcionarInvestimento = document.querySelector('.direcionar-invest');
+const direcionarObjetivos = document.querySelector('.direcionar-objetivos') 
+
+direcionarReceitas.addEventListener('click', () => {
+  window.location.href = 'receitas.html'
+});
+
+direcionarGastos.addEventListener('click', () => {
+  window.location.href = 'gastos.html'
+});
+
+direcionarInvestimento.addEventListener('click', () => {
+  window.location.href = 'investimentos.html'
+});
+
+direcionarObjetivos.addEventListener('click', () => {
+  window.location.href = 'objetivos.html'
+});

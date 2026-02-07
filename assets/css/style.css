@@ -174,3 +174,19 @@ a {
   border: none;
   text-align: center;
 }
+
+.ultimo-gasto {
+  cursor: pointer;
+}
+.direcionar-gastos{
+  cursor: pointer;
+}
+.direcionar-receitas{
+  cursor: pointer;
+}
+.direcionar-objetivos{
+  cursor: pointer;
+}
+.direcionar-invest{
+  cursor: pointer;
+}
